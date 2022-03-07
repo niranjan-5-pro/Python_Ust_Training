@@ -1,0 +1,10 @@
+from picamera import PiCamera
+from time import sleep
+
+camera = PiCamera()
+
+camera.start_preview()
+sleep(10) #10 seconds
+camera.capture('/home/pi/Desktop/img1.jpg') #location to be store
+camera.stop_preview()
+camera.close()
